@@ -11,6 +11,9 @@ let User = UserModel.User; // alias for User Model - User object
 // define the game model
 let game = require('../models/games');
 
+//require the index controller
+let indexController = require('../controllers/index');
+
 // create a function to check if the user is authenticated
 function requireAuth(req, res, next) {
   // check if the user is logged in
@@ -22,11 +25,13 @@ function requireAuth(req, res, next) {
 
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
+  /*
   res.render('content/index', {
     title: 'Home',
     games: '',
     displayName: req.user ? req.user.displayName : ''
    });
+   */
 });
 
 /* GET contact page. */
